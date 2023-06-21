@@ -1,0 +1,17 @@
+RULE--- Cria regra dentro do banco
+
+CREATE RULE nome_regra AS parametros;  //SYNTAX
+
+CREATE RULE rl_preco AS @VALOR > 10.00; 
+
+EXECUTE SP_BINDRULE rl_preco, 'tbl_livro.Preco_livro'; // vincular regra ao rl_preco e usar coluna 'tbl_livro.Preco_livro'
+
+Obs.: Se for alterar o preco do livro para menor que 10 a regra nao vai deixar.
+
+--------------------------
+
+Bkp do banco de dados------
+
+BACKUP DATABASE nome_banco
+TO DISK = 'C:\Temp\Nome_arquivo.bak';
+GO

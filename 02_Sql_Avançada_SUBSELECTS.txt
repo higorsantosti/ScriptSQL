@@ -1,0 +1,19 @@
+SUBSELECTS-------
+
+
+--utilizando subconsulta no WHERE---------
+
+select INATIVO from PRODUTO
+where INATIVO  IN (select INATIVO from PRODUTO WHERE INATIVO = 'N')
+
+
+
+-- utilizando subconsulta apos o FROM------
+
+SELECT temp_tab.cupom, SUM(temp_tab.TOTAL) as Valor_Cupom
+FROM
+(select cv.tcab_IDVenda as CUPOM, iv.tite_Tot as TOTAL
+from tmpcab cv, tmpite iv
+WHERE cv.tcab_IDVenda = iv.tite_IDVenda) AS Temp_Tab
+group by temp_tab.CUPOM
+

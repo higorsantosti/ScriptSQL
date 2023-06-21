@@ -1,0 +1,16 @@
+Contatenacao de Strings
+---utilizando sinal de +
+
+-- string1 | coluna + string2 | coluna
+----------
+SELECT 'Higor '+ 'aluno da Boson' AS 'boson'
+
+
+
+SELECT Nome_autor, Sobrenome_autor FROM tbl_autores
+
+SELECT Nome_autor + ' ' + Sobrenome_autor AS 'NOME-COMPLETO' FROM tbl_autores;
+
+
+SELECT 'Eu gosto do livro ' + Nome_Livro AS 'Meu_livro' FROM tbl_livro;
+

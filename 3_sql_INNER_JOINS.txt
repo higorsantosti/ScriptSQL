@@ -1,0 +1,41 @@
+JOINS e INNER JOIN
+
+
+SELECT colunas FROM tabela1 INNER JOIN tabela2     //INNER JOIN = 'junto' informacao em ambas as tabelas
+ON tabela1.coluna = tabela2.coluna
+
+//ALIAS
+SELECT L.nome_livro, E.nome_editora FROM tbl_livros AS L
+INNER JOIN tbl_editoras AS E
+ON
+L.id_editora = E.id_editora
+
+-----------------------
+LEFT JOIN ou RIGHT JOIN
+
+SELECT coluna FROM tabela_esq
+LEFT JOIN tabela_dir                         //MOSTRA TDO DA TABELA A ESQ MSM Q NAO TEM NA DIREITA
+ON tabela_esq.coluna=tabela_dir.coluna
+WHERE tbl_autores.ID_autor IS NULL
+
+---------------------
+FULL JOIN - Tras registros de tdas as tabelas mesmo que nao possuem correspondencia entre si
+
+SELECT Li.nome_livro, li.id_autor, Au.nome_autor
+FROM tbl_livros as Li
+FULL JOIN tbl_autores AS Au
+ON Li.id_autor = Au.id_autor
+-------------
+
+FULL JOIN - dados que nao possuem correspondencia
+
+SELECT Li.nome_livro, li.id_autor, Au.nome_autor
+FROM tbl_livros as Li
+FULL JOIN tbl_autores AS Au
+ON Li.id_autor = Au.id_autor
+WHERE Li.id_autor IS NULL
+OR Au.id_autor IS NULL
+
+
+
+

@@ -1,0 +1,37 @@
+5_sql_CAMPO_CALCULADO
+
+
+Use test
+--CAMPOS CALCULADOS > TOTAL
+--
+CREATE TABLE Produtos (
+CodProduto smallint, 
+NomeProduto varchar(20),
+Preco MONEY, 
+Qtdade smallint, 
+Total As (Preco * Qtdade)
+;
+
+
+SELECT SUM(Total) FROM Produtos;
+
+--------------------------------
+INDICES  //ENCONTRA DADOS MAIS RAPIDO
+
+
+CREATE INDEX //CRIAR APENAS EM TABELAS Q RECEBEM MTAS CONSULTAS
+
+Exemplo:
+CREATE INDEX nome_indice
+ON nome_tabela (nome_coluna)
+
+SELECT* FROM LIVROS;
+
+CREATE INDEX indice_nome_livro  //deixar mais rapido e falar onde buscar
+
+CREATE INDEX nome_index indice_nome_livro
+ON tbl_livros(coluna_nome_livro);
+
+
+
+

@@ -1,0 +1,34 @@
+FUNCOES AGREGADAS
+
+MIN = Valor mínimo
+MAX = valor Maximo
+AVG = Média Aritimética
+SUM = Total (Soma)
+COUNT = Contador de qtdade de itens
+
+SELECT COUNT(*) FROM tbl_autores
+
+SELECT MAX(Preco_Livro) FROM tbl_livro
+
+SELECT MIN(Preco_Livro) FROM tbl_livro
+
+SELECT AVG(Preco_Livro) FROM tbl_livro
+
+SELECT SUM(Preco_Livro) FROM tbl_livro
+
+-------------
+
+BETWEEN
+SELECT colunas FROM tabela
+WHERE coluna BETWEEN valor1 AND valor2
+
+LIKE E NOT LIKE
+SELECT colunas FROM tabelas
+WHERE nomes LIKE 'Ana%'
+
+SELECT colunas FROM tabelas
+WHERE Nome_livro LIKE '_[igor]%'
+
+
+
+

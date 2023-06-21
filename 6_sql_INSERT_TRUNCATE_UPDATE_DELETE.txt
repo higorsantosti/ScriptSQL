@@ -1,0 +1,47 @@
+CREATE DATABASE nome_do_banco;
+
+Use banco_tal..;
+
+create table produtos (
+	cod_fornec primary key,
+	nome_fornec varchar(50)
+);
+
+insert into Fornecedores (cod_fornec, nome_fornec) VALUES (1, "acme");
+
+INSERT INTO Produtos
+VALUES (100, "monitor lcd", 12, 550.00, 1),
+	(101, "mouse gamer", 15, 50.00, 1),
+	(102, "monitor lcd", 12, 70.00, 1),
+	(103, "monitor lcd", 12, 100.00, 1);
+
+select * from fornec;
+select Nome_fornec from fornecedores;
+select nome_prod, preco_prod from produtos;
+
+
+select Nome_Prod from Produtos
+where ID_Prod = 101;
+
+update Produtos set Preco_prod = 630.00 
+where id_prod =101;
+
+DELETE FROM Produtos
+WHERE ID_Produtos = 101;
+-------------------------------------
+
+SELECT Nome_Prod, Nome_Fornec
+FROM Fornecedores
+INNER JOIN Produtos
+ON Frnecedores.Cod_Fornec = Produtos.Cod_Fornec;
+
+
+select * from produtos a, fornec b
+where a.prod = b.prod
+and a.prod = 'banana'
+order by Nome_prod;
+
+TRUNCATE TABLE Produtos;  //apaga dados de dentro da tabela
+
+
+

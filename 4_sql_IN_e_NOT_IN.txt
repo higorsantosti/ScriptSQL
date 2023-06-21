@@ -1,0 +1,8 @@
+IN e NOT IN
+
+SELECT * FROM tbl_livro
+WHERE Id_Autor IN (1, 2)
+
+SELECT * FROM tbl_livro
+WHERE Id_Autor NOT IN (1, 2)
+
